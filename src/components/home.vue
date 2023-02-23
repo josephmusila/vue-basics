@@ -1,9 +1,11 @@
+
 <template>
 <h1>Email: {{email}}</h1>
 <h2>Mobile: {{mobile = 2356748}}</h2>
 <h2>Name: {{getName("test")}}</h2>
 <h2>Age: {{getAge(67)}} years</h2>
-<button v-on:click="click">Click Me</button>
+
+<Button @click="btnclick("hello world")">Click Me</Button>
 </template>
 
 <script>
@@ -21,8 +23,8 @@ export default {
         }
     },
     methods:{
-        click(){
-            alert("function Called")
+        btnclick(data){
+            alert(data)
         },
         getAge(age){
             return age;
